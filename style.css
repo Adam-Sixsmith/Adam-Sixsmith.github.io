@@ -32,16 +32,12 @@ body{
     transition: transform 0.3s;
  }
 
-  .social-bar .github img{
-    width: 41px;
-    height: 41px;
-    margin-left: -5px;
+  .social-icon .github img{
+    transform: scale(1.15);
  }
 
-  .social-icon img:hover{
-    transform: scale(1.1);
- }
 
+/* My profile pic*/
   .myself{
     width: 200px;
     height: 200px;
@@ -50,16 +46,24 @@ body{
     border: 2px solid black;
  }
 
+
+/*Media queries for smaller screens*/
 @media (max-width: 768px){
-    .social-icon{
-        width: 35px;
-        height: 35px;
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+    .social-icon.github img{
+        transform: scale(1.2);
     }
 }
 
 @media (max-width: 480px){
-    .social-icon {
-        width: 30px;
-        height: 30px;
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+    .social-icon.github img {
+        transform: scale(1.25);
     }
 }
