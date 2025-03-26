@@ -1,27 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap');
 
+/* Colour variables */
+:root{
+    --primary-colour: #007BFF;
+    --accent-colour: #FF007B;
+    --background-colour: #1C1C1C;
+    --text-colour: #FFFFFF;
+    --navbar-bg: #333;
+    --shadow-colour: rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth scrolling*/
+html{
+    scroll-behavior: smooth;
+}
+
+/* Global Colours */
 body{
-    background: #FFF5E1;
+    background: var(--background-colour);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 16px;
-    color: #333;
+    color: var(--text-colour);
     padding-bottom: 70px;
     padding-top: calc(60px + 30px);
 }
 
+/* Navigation Bar */
 .navigation-bar{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #333;
-    color: #fff;
+    background: var(--navbar-bg);
+    color: var(var(--text-colour));
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     z-index: 999;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px var(--shadow-colour);
 }
 
 .container{
@@ -33,6 +50,7 @@ body{
     margin: 0 auto;
 }
 
+/* Navigation Links */
 .clickable-nav{
     padding: 10px;
 }
@@ -51,7 +69,7 @@ body{
 
 .nav-link{
     text-decoration: none;
-    color: #fff;
+    color: var(--text-colour);
     font-size: 18px;
     transition: color 0.3s;
 }
@@ -64,6 +82,7 @@ body{
     transition: color 0.3s;
 }
 
+/* Social Icons */
   .social-icon img {
     width: 32px;
     height: 32px;
@@ -78,28 +97,21 @@ body{
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid black;
-    transition: transform 0.8s ease;
+    border: 2px solid var(--primary-colour);
+    transition: transform 0.8s ease, border-color 0.3s;
     cursor: pointer;
  }
 
-#about{
+/* Sub Sections */
+#about, #skills, #projects, #hobbies{
     text-align: center;
     padding: 10%;
 }
 
-#skills{
-    text-align: center;
-    padding: 10%;
-}
-
-#projects{
-    text-align: center;
-    padding: 10%;
-}
-
+/* Hover Animation On Profile Pic */
 .myself:hover{
     transform: rotate(720deg);
+    border-color: var(--accent-colour);
 }
 
 /*Media queries for smaller screens*/
@@ -110,7 +122,7 @@ body{
     }
 
     .navbar-nav {
-        gap: 15px;                /* Adjust spacing */
+        gap: 15px;           
     }
 }
 
@@ -122,7 +134,7 @@ body{
 
     .navbar-nav {
         flex-direction: column;
-        gap: 15px;                /* Adjust spacing */
+        gap: 15px;                
     }
 
     body {
@@ -130,17 +142,19 @@ body{
     }
 }
 
+/* Social Bar */
 .social-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #333; /* Dark background */
-    color: #fff;      /* White icons */
+    background: var(--navbar-bg); 
+    color: var(--text-colour);    
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 5px 20px;
-    z-index: 999; /* Ensures it stays above other content */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999; 
+    box-shadow: 0 -2px 10px var(--shadow-colour);
 }
+
