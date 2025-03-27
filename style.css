@@ -8,6 +8,7 @@
     --text-colour: #FFFFFF;
     --navbar-bg: #333;
     --shadow-colour: rgba(0, 0, 0, 0.3);
+    --secondary-background-colour: #353434;
 }
 
 /* Smooth scrolling*/
@@ -103,9 +104,15 @@ body{
  }
 
 /* Sub Sections */
-#about, #skills, #projects, #hobbies{
+#about, #projects{
     text-align: center;
     padding: 10%;
+}
+
+#skills, #hobbies{
+    text-align: center;
+    padding: 10%;
+    background: var(--secondary-background-colour);
 }
 
 /* Hover Animation On Profile Pic */
@@ -158,3 +165,69 @@ body{
     box-shadow: 0 -2px 10px var(--shadow-colour);
 }
 
+.mahog-homes-project{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.mahog-homes-text{
+    flex: 1;
+}
+
+.project-image img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mahog-homes-image img:hover{
+    transform: scale(1.1);
+}
+
+.combat-achievement-project{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.ca-text{
+    flex: 2;
+}
+
+.ca-image img{
+    max-width: auto;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ca-calc-image img:hover{
+    transform: scale(1.1);
+}
+
+.wintertodt-project{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.wt-text{
+    flex: 1;
+}
+
+.wt-image img{
+    max-width: auto;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wt-calc-image img:hover{
+    transform: scale(1.1);
+}
